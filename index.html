@@ -47,13 +47,9 @@ applications.
 </p>
   <hr>
 
-  <h2>Featured Project: Fall Detection System</h2>
+  <h2>Featured Project: Wearable Motion Monitoring System — Clinical Validation & MATLAB Post-Processing</h2>
   <p>
-This project focuses on the design and evaluation of a fall detection system intended
-to demonstrate reliable motion sensing and validation-oriented engineering practices
-commonly used in medical device development. The system was built using a three-axis
-analog accelerometer (ADXL335) combined with LM358-based signal conditioning to ensure
-stable and interpretable sensor data.
+This project was developed with a verification and validation mindset to simulate how wearable based digital health features are evaluated in clinical research settings. The focus was placed on structured data acquisiton, Matlab based post processing, and quantitative assessment of system behaviour under controlled test scenarios rather than algorithm optimization. This project demonstatated validation oriented thinking aligned with software as a Medical Device (SaMD) development.
 </p>
 
 <p>
@@ -70,6 +66,18 @@ bench testing, simulated real-world motion scenarios, and evaluation of false-po
 and false-negative behavior. Observed limitations were documented to support a
 risk-aware and iterative design approach aligned with quality and validation
 expectations in regulated medical device and pharmaceutical environments.
+  
+Clinical Validation Approach
+- Defined controlled test scenarios representing fall and non-fall motion patterns.
+- Executed repeated test runs to evaluate consistency and repeatability of sensor outputs.
+- Focused on data integrity, signal stability, and threshold behavior across trials.
+- Organized datasets to enable reproducible MATLAB-based post-processing and review.
+
+MATLAB Post-Processing & Data Analysis
+- Developed MATLAB scripts to post-process accelerometer data collected during validation runs.
+- Performed signal filtering, axis-wise analysis, and threshold evaluation.
+- Generated plots and statistical summaries to assess noise behavior and detection consistency.
+- Structured scripts to support repeatable analysis across multiple datasets, similar to clinical study post-processing workflows.
 </p>
 
   <img src="Fall detection system schematic.jpg" alt="Fall Detection System Circuit" style="width:100%; max-width:700px; margin:20px 0; border:1px solid #ccc;">
@@ -111,8 +119,11 @@ and threshold behavior during initial system testing.
   <li>Evaluated false positives during normal activities (walking, sitting)</li>
 </ul>
 <p>
-Limitations observed include sensitivity to abrupt non-fall movements, highlighting
-the need for more advanced classification methods in future design iterations.
+Tool Assumptions & Limitations
+- Sensor placement was assumed to be consistent across test runs.
+- Threshold values were evaluated under controlled conditions and may vary in real-world use.
+- Noise sensitivity and motion variability may impact detection reliability.
+- Dataset size was limited to simulated scenarios and not representative of large clinical populations.
  <h2>Quality Engineering Project: Design Verification, Validation & Risk Analysis</h2>
 
 <p>
