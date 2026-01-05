@@ -1,176 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Raj Pandya | Biomedical Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
-    color: #111;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px 30px;
-    background-color: #ffffff;
-    line-height: 1.6;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-
-  h1, h2, h3 {
-    color: #000;
-  }
-
-  hr {
-    margin: 40px 0;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <title>Raj Pandya | Clinical Digital Health Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
 
+    <header class="hero">
+      <h1>Wearable Motion Monitoring System</h1>
+      <h2>Clinical Validation & MATLAB Post-Processing</h2>
 
-  <h1>Raj Pandya</h1>
-<p style="font-size:18px; margin-top:-10px;">
-<strong>Biomedical Engineer</strong> — Bioinstrumentation | R&D | Quality & Validation (Medical Devices & Pharma)
-</p>
+      <div class="tags">
+        <span>Clinical V&V</span>
+        <span>MATLAB</span>
+        <span>Wearables</span>
+        <span>SaMD</span>
+      </div>
+    </header>
 
-<p>
-Hands-on experience in bioinstrumentation, analog signal conditioning, verification
-testing, and quality-focused engineering for medical device and pharmaceutical
-applications.
-</p>
-  <hr>
+    <section class="card">
+      <h3>Project Summary</h3>
+      <p>
+        This project was developed with a <strong>verification and validation (V&V) mindset</strong>
+        to simulate how wearable-based digital health features are evaluated in
+        <strong>clinical research environments</strong>.
+        The emphasis was on structured data acquisition, MATLAB-based post-processing,
+        and quantitative system evaluation under controlled test conditions,
+        consistent with <strong>Software as a Medical Device (SaMD)</strong> development.
+      </p>
+      <p>
+        Rather than prioritizing algorithm complexity, the project focused on
+        signal integrity, noise behavior, threshold-based detection, and repeatable testing,
+        aligning with real-world clinical validation workflows.
+      </p>
+    </section>
 
-  <h2>Featured Project: Wearable Motion Monitoring System — Clinical Validation & MATLAB Post-Processing</h2>
-  <p>
-This project was developed with a verification and validation mindset to simulate how wearable based digital health features are evaluated in clinical research settings. The focus was placed on structured data acquisiton, Matlab based post processing, and quantitative assessment of system behaviour under controlled test scenarios rather than algorithm optimization. This project demonstatated validation oriented thinking aligned with software as a Medical Device (SaMD) development.
-</p>
+    <section class="card">
+      <h3>Clinical Validation Approach</h3>
+      <ul>
+        <li>Defined controlled test scenarios representing fall and non-fall motion patterns</li>
+        <li>Executed repeated validation runs to assess consistency and repeatability</li>
+        <li>Evaluated signal stability, threshold behavior, and data integrity</li>
+        <li>Structured activities to mirror small-scale clinical study workflows</li>
+      </ul>
+    </section>
 
-<p>
-Rather than prioritizing complex algorithms, the project emphasizes core engineering
-principles including analog signal integrity, noise reduction, threshold-based event
-detection, and systematic testing. The system continuously monitors acceleration across
-multiple axes and identifies fall-like events based on sudden changes exceeding defined
-limits.
-</p>
+    <section class="card">
+      <h3>MATLAB Post-Processing & Data Analysis</h3>
+      <ul>
+        <li>Developed MATLAB scripts to post-process accelerometer data from validation runs</li>
+        <li>Performed signal filtering, axis-wise analysis, and threshold evaluation</li>
+        <li>Generated plots and statistical summaries to assess detection consistency</li>
+        <li>Structured scripts as reusable post-processing tools across datasets</li>
+      </ul>
+    </section>
 
-<p>
-Significant attention was given to verification and validation activities, including
-bench testing, simulated real-world motion scenarios, and evaluation of false-positive
-and false-negative behavior. Observed limitations were documented to support a
-risk-aware and iterative design approach aligned with quality and validation
-expectations in regulated medical device and pharmaceutical environments.
-  
-Clinical Validation Approach
-- Defined controlled test scenarios representing fall and non-fall motion patterns.
-- Executed repeated test runs to evaluate consistency and repeatability of sensor outputs.
-- Focused on data integrity, signal stability, and threshold behavior across trials.
-- Organized datasets to enable reproducible MATLAB-based post-processing and review.
+    <section class="card">
+      <h3>System Overview</h3>
+      <ul>
+        <li>Multi-axis wearable motion sensing using accelerometer-based acquisition</li>
+        <li>Threshold-based event detection for fall-like motion patterns</li>
+        <li>Focus on signal integrity, noise reduction, and repeatable measurements</li>
+        <li>Designed for validation-focused analysis rather than algorithm optimization</li>
+      </ul>
+    </section>
 
-MATLAB Post-Processing & Data Analysis
-- Developed MATLAB scripts to post-process accelerometer data collected during validation runs.
-- Performed signal filtering, axis-wise analysis, and threshold evaluation.
-- Generated plots and statistical summaries to assess noise behavior and detection consistency.
-- Structured scripts to support repeatable analysis across multiple datasets, similar to clinical study post-processing workflows.
-</p>
+    <section class="card">
+      <h3>Tool Assumptions & Limitations</h3>
+      <ul>
+        <li>Sensor placement assumed consistent across validation runs</li>
+        <li>Thresholds evaluated under controlled test conditions</li>
+        <li>Dataset limited to simulated scenarios</li>
+        <li>Real-world motion variability may impact detection reliability</li>
+      </ul>
+    </section>
 
-  <img src="Fall detection system schematic.jpg" alt="Fall Detection System Circuit" style="width:100%; max-width:700px; margin:20px 0; border:1px solid #ccc;">
-<p><em>
-Figure: Circuit schematic showing ADXL335 accelerometer interfacing with LM358-based
-signal conditioning and microcontroller input.
-</em></p>
+    <section class="card">
+      <h3>Technical & Validation Documentation</h3>
+      <ul>
+        <li>Documented system architecture and validation methodology</li>
+        <li>Recorded assumptions, limitations, and validation observations</li>
+        <li>Applied verification-style documentation aligned with regulated environments</li>
+      </ul>
+    </section>
 
-  <p>
-    Designed a low-cost fall detection system using a 3-axis accelerometer (ADXL335)
-    and analog signal conditioning (LM358).
-  </p>
-  <ul>
-    <li>Implemented filtering and amplification for stable ADC input</li>
-    <li>Developed threshold-based fall detection logic</li>
-    <li>Tested system performance across daily activities and simulated falls</li>
-  </ul>
-  <p>
-The schematic was designed to ensure reliable analog signal acquisition by incorporating
-appropriate filtering and amplification stages prior to analog-to-digital conversion.
-Design decisions focused on minimizing noise and improving signal stability during
-dynamic motion conditions.
-</p>
-  <h3>Testing & Validation</h3>
-  <p>
-<a href="https://drive.google.com/file/d/1nckBxTOEhTz1Xihux_kiyo4X2bBspuQq/view?usp=drive_link" target="_blank">
-View initial bench testing video of the fall detection circuit
-</a>
-</p>
+    <footer>
+      <p>Raj Pandya | Biomedical Engineering | Clinical Digital Health</p>
+    </footer>
 
-<p><em>
-Video evidence demonstrating real-time sensor response, signal stability,
-and threshold behavior during initial system testing.
-</em></p>
-
-<ul>
-  <li>Bench-tested acceleration response across X, Y, Z axes</li>
-  <li>Verified threshold response for simulated fall events</li>
-  <li>Evaluated false positives during normal activities (walking, sitting)</li>
-</ul>
-<p>
-Tool Assumptions & Limitations
-- Sensor placement was assumed to be consistent across test runs.
-- Threshold values were evaluated under controlled conditions and may vary in real-world use.
-- Noise sensitivity and motion variability may impact detection reliability.
-- Dataset size was limited to simulated scenarios and not representative of large clinical populations.
- <h2>Quality Engineering Project: Design Verification, Validation & Risk Analysis</h2>
-
-<p>
-Applied quality engineering principles alongside technical development to
-evaluate design robustness, verification coverage, validation against intended
-use, and potential risk scenarios relevant to medical device development.
-</p>
-
-<h3>Objective</h3>
-<p>
-To verify that design outputs met defined design inputs and to validate that the
-system performance aligned with intended use, while identifying and mitigating
-potential risks.
-</p>
-
-<h3>Verification Activities</h3>
-<ul>
-  <li>Defined measurable design inputs including response time, detection threshold, and signal stability</li>
-  <li>Developed and executed bench-level verification test cases under controlled conditions</li>
-  <li>Verified repeatability of sensor outputs across multiple test runs</li>
-</ul>
-
-<h3>Validation Activities</h3>
-<ul>
-  <li>Simulated real-world use scenarios such as walking, sitting, and fall-like motion</li>
-  <li>Evaluated system behavior relative to intended use rather than only specifications</li>
-  <li>Documented performance limitations observed during testing</li>
-</ul>
-
-<h3>Risk Analysis (ISO 14971 – Conceptual)</h3>
-<ul>
-  <li>Identified hazards including false negatives, false positives, and sensor drift</li>
-  <li>Assessed potential impact on user safety and system reliability</li>
-  <li>Implemented basic risk controls such as signal filtering, threshold optimization, and calibration checks</li>
-</ul>
-
-<h3>Outcome</h3>
-<p>
-This project strengthened understanding of quality-driven development by integrating
-verification, validation, and risk-based thinking into the engineering workflow rather
-than treating quality as a post-design activity.
-</p>
-  <hr>
-
-  <h2>Contact</h2>
-  <p>Email: rajpandya98@gmail.com</p>
-  <p>LinkedIn: https://linkedin.com/in/rajpandya98</p>
-   </div>
+  </div>
 </body>
 </html>
