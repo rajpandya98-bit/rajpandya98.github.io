@@ -2,137 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Raj Pandya | Clinical Digital Health Portfolio</title>
+  <title>Raj Pandya | Quality Systems & Process Automation</title>
  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
 
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="impact-assessment-engine.html">Impact Assessment Engine</a>
+      <a href="compliance-tracker.html">Compliance Tracker</a>
+      <a href="wearable-monitoring.html">Wearable Motion Monitoring</a>
+    </nav>
+
     <header class="hero">
-      <h1>Wearable Motion Monitoring System</h1>
-      <h2>Clinical Validation & MATLAB Post-Processing</h2>
+      <h1>Raj Pandya</h1>
+      <h2>Quality Engineering &amp; Process Automation</h2>
 
       <div class="tags">
-        <span>Clinical V&V</span>
-        <span>MATLAB</span>
-        <span>Wearables</span>
-        <span>SaMD</span>
+        <span>GMP / Quality Systems</span>
+        <span>Process Automation</span>
+        <span>AI-Assisted Tooling</span>
+        <span>Validation</span>
       </div>
     </header>
 
     <section class="card">
-      <h3>Project Summary</h3>
+      <h3>About</h3>
       <p>
-        This project was developed with a <strong>verification and validation (V&V) mindset</strong>
-        to simulate how wearable-based digital health features are evaluated in
-        <strong>clinical research environments</strong>.
-        The emphasis was on structured data acquisition, MATLAB-based post-processing,
-        and quantitative system evaluation under controlled test conditions,
-        consistent with <strong>Software as a Medical Device (SaMD)</strong> development.
-      </p>
-      <p>
-        Rather than prioritizing algorithm complexity, the project focused on
-        signal integrity, noise behavior, threshold-based detection, and repeatable testing,
-        aligning with real-world clinical validation workflows.
+        I work at the intersection of quality engineering and process automation.
+        My background is in GMP-regulated manufacturing and validation &mdash; root
+        cause analysis, risk assessment, documentation control &mdash; and I use that
+        same structured thinking to design tools that reduce manual review time and
+        human error in regulated workflows. The projects below range from a rule-based
+        decision-support engine built with AI-assisted design, to closed-loop workflow
+        automation, to a clinical-style validation build in MATLAB.
       </p>
     </section>
-    <section class="card">
-  <h3>Schematic Diagram & Bench Test Setup</h3>
-
-  <p>
-    The wearable motion monitoring system was implemented using an accelerometer-based
-    sensing circuit with signal conditioning to support stable and repeatable data acquisition
-    during bench-level validation testing.
-  </p>
-
-  <img
-    src="wearable_motion_schematic.png"
-    alt="Schematic diagram of wearable motion monitoring system"
-    class="project-image"
-  />
-
-  <p class="image-caption">
-    Figure: Schematic diagram illustrating the sensor interface and signal conditioning
-    used for validation-focused data acquisition.
-  </p>    
-</section>
-<section class="card">
-  <h3>Bench Testing Demonstration</h3>
-
-  <p>
-    This video demonstrates bench-level functional testing of the wearable motion
-    monitoring system, showing real-time sensor response under controlled motion
-    conditions used during validation testing.
-  </p>
-
-  <div class="video-container">
-    <iframe
-      src="https://drive.google.com/file/d/1nckBxTOEhTz1Xihux_kiyo4X2bBspuQq/preview"
-      allow="autoplay">
-    </iframe>
-  </div>
-
-  <p class="image-caption">
-    Video: Bench testing of the wearable system during controlled motion evaluation.
-  </p>
-</section>
-
 
     <section class="card">
-      <h3>Clinical Validation Approach</h3>
-      <ul>
-        <li>Defined controlled test scenarios representing fall and non-fall motion patterns</li>
-        <li>Executed repeated validation runs to assess consistency and repeatability</li>
-        <li>Evaluated signal stability, threshold behavior, and data integrity</li>
-        <li>Structured activities to mirror small-scale clinical study workflows</li>
-      </ul>
+      <h3>Change-Control Impact Assessment Engine</h3>
+      <div class="tags">
+        <span>Excel / VBA</span>
+        <span>Decision Logic</span>
+        <span>Process Automation</span>
+      </div>
+      <p>
+        A rule-based decision-support tool that classifies proposed changes, scores
+        department relevance across three weighted signals, and recommends
+        Include / Review / Exclude per department &mdash; cutting manual assessment
+        time from ~20 minutes to 5&ndash;7 minutes per case, and adopted for active
+        use by the Quality department.
+      </p>
+      <p><a href="impact-assessment-engine.html">View project &rarr;</a></p>
     </section>
 
     <section class="card">
-      <h3>MATLAB Post-Processing & Data Analysis</h3>
-      <ul>
-        <li>Developed MATLAB scripts to post-process accelerometer data from validation runs</li>
-        <li>Performed signal filtering, axis-wise analysis, and threshold evaluation</li>
-        <li>Generated plots and statistical summaries to assess detection consistency</li>
-        <li>Structured scripts as reusable post-processing tools across datasets</li>
-      </ul>
+      <h3>Change Control Compliance Tracker</h3>
+      <div class="tags">
+        <span>Power Automate</span>
+        <span>Excel</span>
+        <span>Process Automation</span>
+      </div>
+      <p>
+        A closed-loop Excel + Power Automate system that checks for overdue items,
+        prompts the responsible owner for a one-click status update, and automatically
+        updates the tracker and notifies the process owner &mdash; eliminating manual
+        weekly follow-up.
+      </p>
+      <p><a href="compliance-tracker.html">View project &rarr;</a></p>
     </section>
 
     <section class="card">
-      <h3>System Overview</h3>
-      <ul>
-        <li>Multi-axis wearable motion sensing using accelerometer-based acquisition</li>
-        <li>Threshold-based event detection for fall-like motion patterns</li>
-        <li>Focus on signal integrity, noise reduction, and repeatable measurements</li>
-        <li>Designed for validation-focused analysis rather than algorithm optimization</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h3>Tool Assumptions & Limitations</h3>
-      <ul>
-        <li>Sensor placement assumed consistent across validation runs</li>
-        <li>Thresholds evaluated under controlled test conditions</li>
-        <li>Dataset limited to simulated scenarios</li>
-        <li>Real-world motion variability may impact detection reliability</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h3>Technical & Validation Documentation</h3>
-      <ul>
-        <li>Documented system architecture and validation methodology</li>
-        <li>Recorded assumptions, limitations, and validation observations</li>
-        <li>Applied verification-style documentation aligned with regulated environments</li>
-      </ul>
+      <h3>Wearable Motion Monitoring System</h3>
+      <div class="tags">
+        <span>Process Automation</span>
+        <span>Clinical V&amp;V</span>
+        <span>MATLAB</span>
+      </div>
+      <p>
+        A prototype fall-detection system built with a verification and validation
+        mindset &mdash; accelerometer-based data acquisition, MATLAB post-processing,
+        and structured documentation consistent with SaMD-style development.
+      </p>
+      <p><a href="wearable-monitoring.html">View project &rarr;</a></p>
     </section>
 
     <footer>
-      <p>Raj Pandya | Biomedical Engineering | Clinical Digital Health</p>
+      <p>Raj Pandya | Quality Systems & Process Automation</p>
     </footer>
 
   </div>
 </body>
 </html>
-
