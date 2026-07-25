@@ -38,6 +38,20 @@ body {
   margin: 4px;
 }
 
+.card .tags {
+  margin-bottom: 12px;
+}
+
+.card a {
+  color: #1a3d7c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
 .card {
   background: white;
   border-radius: 10px;
@@ -99,4 +113,83 @@ footer {
   color: #666;
   font-size: 0.9rem;
   margin-top: 40px;
+}
+
+/* --- Added for multi-project portfolio nav --- */
+
+.site-nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.site-nav a {
+  display: inline-block;
+  color: #1a3d7c;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin: 0 14px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-bottom: 2px solid #1a3d7c;
+}
+
+.impact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.92rem;
+}
+
+.impact-table th,
+.impact-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e6eefc;
+}
+
+.impact-table th {
+  background: #e6eefc;
+  color: #1a3d7c;
+  font-weight: 600;
+}
+
+.metric-row {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.metric-box {
+  flex: 1;
+  min-width: 160px;
+  background: #e6eefc;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+}
+
+.metric-box .metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a3d7c;
+}
+
+.metric-box .metric-label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.disclosure-note {
+  font-size: 0.85rem;
+  color: #777;
+  font-style: italic;
+  border-left: 3px solid #e6eefc;
+  padding-left: 12px;
+  margin-top: 25px;
 }
