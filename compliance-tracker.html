@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Change Control Compliance Tracker | Raj Pandya</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="impact-assessment-engine.html">Impact Assessment Engine</a>
+      <a href="compliance-tracker.html" class="active">Compliance Tracker</a>
+      <a href="wearable-monitoring.html">Wearable Motion Monitoring</a>
+    </nav>
+
+    <header class="hero">
+      <h1>Change Control Compliance Tracker</h1>
+      <h2>Excel + Power Automate Closed-Loop Reminder System</h2>
+
+      <div class="tags">
+        <span>Process Automation</span>
+        <span>Power Automate</span>
+        <span>Excel</span>
+        <span>Workflow Automation</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <h3>The Problem</h3>
+      <p>
+        As a QAD intern, I noticed a recurring backlog: change controls sat open
+        past their due dates because the person responsible for submitting evidence
+        simply forgot, and there was no consistent process nudging them. Worse, even
+        after someone finished their part, the tracking sheet often didn't reflect it
+        &mdash; status updates depended on someone remembering to go back and edit
+        the spreadsheet by hand.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>What I Built</h3>
+      <p>
+        A closed-loop automation combining an Excel log with a Power Automate flow
+        that doesn't just remind people &mdash; it acts on their response:
+      </p>
+      <ul>
+        <li>
+          The flow reads every row in the change-control tracking sheet and checks
+          each item against its due date.
+        </li>
+        <li>
+          For anything overdue and still open, it sends the responsible owner an
+          email with a built-in approval action &mdash; a simple &ldquo;Task
+          Completed: Yes / No&rdquo; prompt they can answer directly from Outlook,
+          no need to open the tracker themselves.
+        </li>
+        <li>
+          If the owner responds <strong>Yes</strong>, the flow automatically updates
+          that row's status in the Excel sheet <em>and</em> sends a confirmation email
+          to the process owner &mdash; closing the loop without anyone touching the
+          spreadsheet by hand.
+        </li>
+        <li>
+          If the owner responds <strong>No</strong> (or doesn't respond), the item
+          stays open and surfaces again on the next run.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Flow Diagram</h3>
+      <p>
+        The actual Power Automate flow, showing the check-overdue &rarr; request-approval
+        &rarr; update-and-notify logic:
+      </p>
+      <img
+        src="tracker-flow-diagram.png"
+        alt="Power Automate flow diagram showing List rows, Apply to each, Condition for overdue items, Start and wait for an approval, a second condition on the response, then Update a row and Send an email"
+        class="project-image"
+      />
+      <p class="image-caption">
+        Figure: The flow lists all tracked items, filters to what's overdue, requests
+        an approval-style response from the owner, then conditionally updates the
+        sheet and notifies the process owner.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>How It Looks (Illustrative Example)</h3>
+      <p>
+        The table below uses placeholder names and emails to illustrate the tracker's
+        structure &mdash; no real personnel data is shown.
+      </p>
+      <table class="impact-table">
+        <tr>
+          <th>Change ID</th><th>Assigned To</th><th>Assigned To Email</th>
+          <th>Due Date</th><th>Status</th>
+        </tr>
+        <tr><td>CHG-001</td><td>Jane D.</td><td>jane.d@example.com</td><td>03-Jul-2026</td><td>In Progress</td></tr>
+        <tr><td>CHG-002</td><td>Sam R.</td><td>sam.r@example.com</td><td>03-Jul-2026</td><td>In Progress</td></tr>
+        <tr><td>CHG-003</td><td>Alex M.</td><td>alex.m@example.com</td><td>08-Jul-2026</td><td>Completed</td></tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h3>Impact</h3>
+      <div class="metric-row">
+        <div class="metric-box">
+          <div class="metric-value">Weekly</div>
+          <div class="metric-label">Automatic overdue checks and reminders</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-value">Closed-loop</div>
+          <div class="metric-label">Status updates itself &mdash; no manual sheet editing</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Why I Built It</h3>
+      <p>
+        This wasn't part of my assigned scope. I noticed the same backlog forming
+        week after week, and that even resolved items often lagged in the tracker
+        because updating it was a manual afterthought. Rather than just automating
+        the reminder, I closed the loop: the person doing the work confirms
+        completion in one click, and the system handles the bookkeeping.
+      </p>
+    </section>
+
+    <p class="disclosure-note">
+      Note: all names, emails, and case details shown here are illustrative and
+      anonymized. No confidential or proprietary company data is reproduced.
+    </p>
+
+    <footer>
+      <p>Raj Pandya | Biomedical Engineering | Clinical Digital Health</p>
+    </footer>
+
+  </div>
+</body>
+</html>
