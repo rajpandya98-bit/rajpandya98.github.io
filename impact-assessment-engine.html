@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Change-Control Impact Assessment Engine | Raj Pandya</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="impact-assessment-engine.html" class="active">Impact Assessment Engine</a>
+      <a href="compliance-tracker.html">Compliance Tracker</a>
+      <a href="wearable-monitoring.html">Wearable Motion Monitoring</a>
+    </nav>
+
+    <header class="hero">
+      <h1>Change-Control Impact Assessment Engine</h1>
+      <h2>Rule-Based Decision Support &amp; Weighted Confidence Scoring</h2>
+
+      <div class="tags">
+        <span>Process Automation</span>
+        <span>Excel / VBA</span>
+        <span>Decision Logic</span>
+        <span>GMP Workflow</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <h3>The Problem</h3>
+      <p>
+        At a GMP-regulated manufacturing site, every change control requires an
+        Impact Assessment (IA) &mdash; a reviewer has to determine which of roughly
+        17 departments (Validation, Engineering, Quality Control, IT, Health &amp; Safety,
+        and others) need to review a proposed change before it can move forward.
+      </p>
+      <p>
+        This judgment call was made case by case, from memory and experience, with
+        no structured reference point. It was slow, and two reviewers could reasonably
+        reach different conclusions on the same case.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>What I Built</h3>
+      <p>
+        A rule-based decision-support tool designed to mirror how an experienced
+        reviewer actually thinks through a case, rather than just matching keywords:
+      </p>
+      <ul>
+        <li>
+          <strong>Case-family classification</strong> &mdash; the change description is
+          matched against a defined taxonomy of case types (facility/utility changes,
+          IT and system access, lab and analytical methods, packaging and labeling,
+          safety and environmental risk, and others), each with documented reasoning
+          for why specific departments are typically involved.
+        </li>
+        <li>
+          <strong>Weighted scoring engine</strong> &mdash; for each department, the tool
+          combines three signals: category match strength, rule-based trigger phrases
+          specific to that department's scope, and similarity to precedent from a
+          library of historical, completed cases.
+        </li>
+        <li>
+          <strong>Negative rules layer</strong> &mdash; a deliberate set of exclusion
+          rules that suppress false positives. For example, the word &ldquo;workflow&rdquo;
+          alone shouldn't pull in Quality Control if the surrounding context is clearly
+          a packaging record update, not a lab issue. This was the part that took the
+          most iteration to get right.
+        </li>
+        <li>
+          <strong>Confidence output</strong> &mdash; each department receives a total
+          score, a confidence percentage, and a clear recommendation (Include / Review /
+          Exclude), displayed on a dashboard alongside a plain-language explanation of why.
+        </li>
+      </ul>
+      <p>
+        I used AI assistance to help translate expert human reasoning &mdash; the actual
+        mental steps a reviewer takes &mdash; into this structured rule logic, then built
+        the scoring model and automation in Excel and VBA.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>How a Case Flows Through the Engine</h3>
+      <table class="impact-table">
+        <tr>
+          <th>Step</th>
+          <th>What Happens</th>
+        </tr>
+        <tr>
+          <td>1. Intake</td>
+          <td>Reviewer enters the change-control number, title, and description into a single intake field.</td>
+        </tr>
+        <tr>
+          <td>2. Classification</td>
+          <td>The engine matches the description against case families and department-specific trigger phrases.</td>
+        </tr>
+        <tr>
+          <td>3. Scoring</td>
+          <td>Each department accumulates a weighted score from category match, rule match, and historical precedent.</td>
+        </tr>
+        <tr>
+          <td>4. Exclusion check</td>
+          <td>Negative rules suppress likely false positives before a final score is set.</td>
+        </tr>
+        <tr>
+          <td>5. Recommendation</td>
+          <td>Dashboard displays Include / Review / Exclude per department, with the reasoning stated in plain language.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h3>How It Looks (Illustrative Example)</h3>
+      <p>
+        The example below uses a fictional case to illustrate how the engine
+        works &mdash; the structure and logic mirror the real tool, but no actual
+        change-control data is shown.
+      </p>
+
+      <p style="margin-top:18px;"><strong>Intake</strong></p>
+      <table class="impact-table">
+        <tr><th>Field</th><th>Example Entry</th></tr>
+        <tr><td>Change Control No.</td><td>CC-EX-001</td></tr>
+        <tr><td>Title</td><td>Modification to utility connection on a manufacturing suite HVAC panel</td></tr>
+        <tr><td>Description</td><td>Practice change to relieve pressure at a utility connection point; supporting SOP will be revised.</td></tr>
+        <tr><td>Owning Department</td><td>Manufacturing</td></tr>
+      </table>
+
+      <p style="margin-top:22px;"><strong>Confidence Matrix Output</strong></p>
+      <table class="impact-table">
+        <tr>
+          <th>Department</th><th>Case Family Wt.</th><th>Rule Wt.</th>
+          <th>Historical Wt.</th><th>Total Score</th><th>Confidence %</th><th>Recommendation</th>
+        </tr>
+        <tr><td>Facilities</td><td>0</td><td>10</td><td>0</td><td>10</td><td>0.1</td><td>Exclude</td></tr>
+        <tr><td>Quality Operation</td><td>0</td><td>10</td><td>0</td><td>10</td><td>0.1</td><td>Exclude</td></tr>
+        <tr style="background:#e6eefc;"><td>Health &amp; Safety</td><td>50</td><td>10</td><td>0</td><td>60</td><td>0.6</td><td><strong>Review</strong></td></tr>
+        <tr><td>Validation</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>Exclude</td></tr>
+      </table>
+
+      <p style="margin-top:22px;"><strong>Rule Table (excerpt)</strong></p>
+      <table class="impact-table">
+        <tr><th>Department</th><th>Priority</th><th>Trigger Phrases</th><th>Include Mode</th></tr>
+        <tr><td>Validation</td><td>1</td><td>qualification; requalification; IQ/OQ/PQ; verification</td><td>Always</td></tr>
+        <tr><td>Facilities</td><td>1</td><td>utility; HVAC; pressure drop; water system</td><td>Conditional</td></tr>
+        <tr><td>Health &amp; Safety</td><td>2</td><td>hazard; safety; PPE; pressure; risk assessment</td><td>Conditional</td></tr>
+      </table>
+
+      <p style="margin-top:22px;"><strong>Negative Rules (excerpt)</strong></p>
+      <table class="impact-table">
+        <tr><th>Department</th><th>Exclusion Keywords</th><th>Reason</th></tr>
+        <tr>
+          <td>Quality Control</td>
+          <td>user access; permissions; workflow; packaging; label</td>
+          <td>Prevents false triggers for access, packaging, or user-management changes.</td>
+        </tr>
+        <tr>
+          <td>Information Technology</td>
+          <td>filter integrity; purification; bulk tank; HVAC</td>
+          <td>Prevents false triggers for process, filtration, or utility-only changes.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h3>Impact</h3>
+      <div class="metric-row">
+        <div class="metric-box">
+          <div class="metric-value">~20 min &rarr; 5&ndash;7 min</div>
+          <div class="metric-label">Manual assessment time per case</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-value">Active use</div>
+          <div class="metric-label">Adopted by the Quality department</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Why I Built It</h3>
+      <p>
+        Nobody assigned this. I noticed reviewers were re-deriving the same judgment
+        calls, case after case, often reaching similar conclusions through similar
+        reasoning &mdash; which meant that reasoning could be captured and made consistent.
+        I treated it as a product problem: what does the reviewer actually need to know,
+        in what order, to make a fast and defensible call?
+      </p>
+    </section>
+
+    <p class="disclosure-note">
+      Note: all change-control numbers, titles, and case details shown here are
+      illustrative and anonymized. No confidential or proprietary company data is
+      reproduced.
+    </p>
+
+    <footer>
+      <p>Raj Pandya | Biomedical Engineering | Clinical Digital Health</p>
+    </footer>
+
+  </div>
+</body>
+</html>
